@@ -8,9 +8,11 @@ html(ng-app="myApp")
     link(rel='stylesheet', href='/js/lib/bootstrap/css/bootstrap.css')
     link(rel='stylesheet', href='/js/lib/bootstrap/css/bootstrap-responsive.css')
     link(rel='stylesheet', href='/css/app.css')
+    script(src="http://code.jquery.com/jquery-1.9.1.min.js")
 
-    body
+  body
     div.container
-        block body
+        div.row-fluid
+            block body
     footer
         block footer

@@ -9,6 +9,12 @@ module.exports = function (app) {
         }
     );
 
+    app.get('/templates/:name', function (req, res) {
+            var name = req.params.name;
+            res.render('templates/' + name);
+        }
+    );
+
     app.get('/', index);
 
     app.get('*', index);

@@ -22,12 +22,12 @@ app.configure(function () {
         secret: 'victoria secret m'
     }));
     app.use(express.static(path.join(__dirname, 'public')));
-    app.use('/js/app.js', browserify('./client/client-main.js'));
+    app.use('/js/app.js', browserify('../client/client-main.js'));
     app.use(app.router);
 
 });
 
-require("./server/routes")(app)
+require("./routes")(app)
 
 
 app.listen(3000, function () {

@@ -22,7 +22,7 @@ app.configure(function () {
         secret: 'victoria secret m'
     }));
     app.use(express.static(path.join(__dirname, 'public')));
-    app.use('/js/client/app.js', browserify('./client/app/app.js'));
+    app.use('/js/app.js', browserify('./client/client-main.js'));
     app.use(app.router);
 
 });
